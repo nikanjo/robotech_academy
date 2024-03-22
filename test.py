@@ -1,9 +1,8 @@
-import numpy as np
+table = {"top-L" : "1" , "top-M" : "2" , "top-R" : "" ,
+        "mid-L" : "" , "mid-M" : " ", "mid-R" : " ",
+        "low-L" : " " , "low-M" : " " , "low-R" : " "}
 
-def numpysum(n):
-  a = np.arange(n) ** 2
-  b = np.arange(n) ** 3
-  c = a + b
-  return c
 
-numpysum(10)
+
+for k,v in table.items():
+  print(table["top-M"])

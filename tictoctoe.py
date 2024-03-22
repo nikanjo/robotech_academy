@@ -79,16 +79,40 @@ def move_computer():
         possible_moves.remove(move)
         table["low-R"] = "o"
 
+def check_status():
+    if(status == TRUE):
+        print("USER IS WINNER")
+    else:
+        print("COMPUTER IS WINNER")
 
+def rules_win():
+    if(table["top-L"] == table["top-M"] == table["top-R"]):
+        print("you win")
+    if(table["mid-L"] == table["mid-M"] == table["mid-R"]):
+        print("you win")
+    if(table["low-L"] == table["low-M"] == table["low-R"]):
+        print("you win")
+    if(table["top-L"] == table["mid-L"] == table["low-L"]):
+        print("you win")
+    if(table["top-M"] == table["mid-M"] == table["low-M"]):
+        print("you win")
+    if(table["top-L"] == table["mid-L"] == table["low-L"]):
+        print("you win")
+    if(table["top-L"] == table["mid-M"] == table["low-R"]):
+        print("you win")
+    if(table["top-R"] == table["mid-M"] == table["low-L"]):
+        print("you win")
 def main():
     while True:
         out = move_user()
+        rules_win()
         if out == "END":
             print("GAME IS ENDED")
             break
         print_table()
 
         c_out = move_computer()
+        rules_win()
         if c_out == "END":
             print("GAME IS ENDED")
             break
