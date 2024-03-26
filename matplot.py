@@ -23,6 +23,13 @@ y2 = np.array([6, 2, 7, 11])
 plt.plot(y1, label ='train')
 plt.plot(y2, label = 'test')
 
+plt.xlabel("EPOCH")
+plt.ylabel("Loss")
+
+
+font1 = {"family" : "serif", "color" : "red" , "size": 20}
+plt.title("classification" , fontdict= font1, loc ="right")
 plt.legend()
 
+plt.grid()
 plt.show()
